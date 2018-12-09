@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+ <!--    <link rel="stylesheet" type="text/css" href="webappFolder/templates/style.css">
+ -->
 </head>
 <body>
-    <h1>Find the optimal route!</h1>
+    <h1 align="center">Find the optimal route!</h1>
+    <h3 align="center">Select the items you would like to buy!</h3>
+
 <!--
     {% for startPoint, text in directions.items() %}
         <p>{{ startPoint }}</p>
@@ -16,18 +19,14 @@
     {% endfor %}
 -->
 
-
-    {% for this in wishlist %}
-        <p>{{ this }}</p>
+<!--
+<img align="left" src="../../shopper_mapper_logo.jpg" width="500" height="333">
+-->
     <br/>
-    {% else %}
-        <p>You have no items selected</p>
-    {% endfor %}
 
 
 
-
-
+<div align="center">
     <form action="/addItem" method="post">
 
         <select name="items">
@@ -42,8 +41,23 @@
 
         </select>
 
-        <input type="submit" value="addItem">
+        <input type="submit" align="center" value="Add Item">
     </form>
+</div>
+
+
+    {% for this in wishlist %}
+        <p align="center">{{ this }}</p>
+    <br/>
+    {% else %}
+        <p align="center">You have no items selected</p>
+    {% endfor %}
+
+
+
+
+
+
 
 
 <!--
