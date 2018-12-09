@@ -8,28 +8,18 @@ def draw_square_grid_example():
     g.walls = DIAGRAM1_WALLS  # long list, [(21, 0), (21, 2), ...]
     draw_grid(g)
 
-def breadth_first_search_simple_graph_test():
-    graph = SimpleGraph()
-    graph.edges = {
-        'A': ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-        'B': ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-        'C': ['A', 'B', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-        'D': ['A', 'B', 'C', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-        'E': ['A', 'B', 'C', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']}
-
-    breadth_first_search(graph, 'C')
-
 
 def breadth_first_search_simple_graph_example():
     graph = SimpleGraph()
     graph.edges = {
-        'A': ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-        'B': ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-        'C': ['A', 'B', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-        'D': ['A', 'B', 'C', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-        'E': ['A', 'B', 'C', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+        'A': ['B'],
+        'B': ['E', 'A', 'C', 'D'],
+        'C': ['A'],
+        'D': ['E', 'A'],
+        'E': ['B']
     }
-    breadth_first_search(graph, 'A')
+    breadth_first_search(graph, 'A', 'E')
+
 
 
 def breadth_first_search_square_grid_example():
@@ -57,10 +47,9 @@ def a_star_search_example():
 
 if __name__ == '__main__':
     draw_square_grid_example()
-    #breadth_first_search_simple_graph_test()
-#    breadth_first_search_simple_graph_example()
-#    breadth_first_search_square_grid_example()
-    #print('Dijkstra')
-    #dijkstra_search_example()
-    #print('A Star')
+    breadth_first_search_simple_graph_example()
+ #   breadth_first_search_square_grid_example()
+ #   print('Dijkstra')
+  ##  dijkstra_search_example()
+   # print('A Star')
     #a_star_search_example()

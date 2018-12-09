@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <h1>Find the optimal route!</h1>
+<!--
+    {% for startPoint, text in directions.items() %}
+        <p>{{ startPoint }}</p>
+    <br/>
+    {% else %}
+        <p>You have no websites</p>
+    {% endfor %}
+-->
+
+
+    {% for this in wishlist %}
+        <p>{{ this }}</p>
+    <br/>
+    {% else %}
+        <p>You have no items selected</p>
+    {% endfor %}
+
+
+
+
+
+    <form action="/addItem" method="post">
+
+        <select name="items">
+            <option value="{{ items[0] }}"> {{ items[0] }}</option>
+            <option value="{{ items[1] }}"> {{ items[1] }}</option>
+            <option value="{{ items[2] }}"> {{ items[2] }}</option>
+            <option value="{{ items[3] }}"> {{ items[3] }}</option>
+            <option value="{{ items[4] }}"> {{ items[4] }}</option>
+            <option value="{{ items[5] }}"> {{ items[5] }}</option>
+            <option value="{{ items[6] }}"> {{ items[6] }}</option>
+            <option value="{{ items[7] }}"> {{ items[7] }}</option>
+
+        </select>
+
+        <input type="submit" value="addItem">
+    </form>
+
+
+<!--
+    <form action="/addDirection" method="post">
+
+        <input type="text" name = "startPoint">
+        <input type="text" name="endPoint">
+        <input type="submit" value="send">
+    </form>
+-->
+
+</body>
+</html>
